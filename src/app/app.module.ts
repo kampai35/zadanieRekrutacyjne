@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularSlickgridModule } from 'angular-slickgrid';
+import { AngularSlickgridModule, SortService } from 'angular-slickgrid';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +15,7 @@ import { GridComponent } from './grid/grid.component';
   imports: [
     AngularSlickgridModule.forRoot(),
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
