@@ -6,7 +6,7 @@
     "paths": {
       "jszip": ["../node_modules/jszip/dist/jszip.min.js"]
     },
-    "types": []
+    "types": [],
   },
   "files": [
     "src/main.ts",

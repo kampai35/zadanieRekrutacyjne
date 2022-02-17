@@ -1,23 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularSlickgridModule, SortService } from 'angular-slickgrid';
+import { AngularSlickgridModule } from 'angular-slickgrid';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GridComponent } from './grid/grid.component';
+import { GridSecVersionComponent } from './grid-sec-version/grid-sec-version.component';
+import { AgGridModule } from 'ag-grid-angular';
 
-//@dynamic
+
 @NgModule({
   declarations: [
     AppComponent,
-    GridComponent
+    GridComponent,
+    GridSecVersionComponent
   ],
   imports: [
     AngularSlickgridModule.forRoot(),
+    AgGridModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  }
