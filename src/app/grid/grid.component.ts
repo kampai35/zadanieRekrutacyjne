@@ -1,3 +1,4 @@
+import { IData } from '../interfaces';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {
   AngularGridInstance,
@@ -22,17 +23,17 @@ export class GridComponent implements OnInit {
   gridOptions: GridOption = {};
   frozenColumnCount = 1;
 
-  dataset: any[] = [
-    {id: 482, name: "SNIADANIE NA LATO", fiscalName: "SNIADANIE NA LATO", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:"8", price:"25"},
-    {id: 483, name: "SNIADANIE ANGIELSKIE", fiscalName: "SNIADANIE ANGIELSKIE", baseUnit: "porcja", saleCategory: "Śniadania", category: "Jedzenie", vat:"8", price:"21"},
-    {id: 480, name: "OWSIANKA", fiscalName: "OWSIANKA", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:"8", price:"11"},
-    {id: 481, name: "JAJKA ROYAL", fiscalName: "JAJKA ROYAL", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:"8", price:"23"},
-    {id: 478, name: "KANAPKA PASTA JAJKO", fiscalName: "KANAPKA PASTA JAJKO", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:"8", price:"9"},
-    {id: 479, name: "KANAPKA TWAROG", fiscalName: "KANAPKA TWAROG", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:"8", price:"9"},
-    {id: 476, name: "JAJKA SADZONE", fiscalName: "JAJKA SADZONE", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:"8", price:"10"},
-    {id: 477, name: "JAJKO 1 SZTUKA", fiscalName: "JAJKO 1 SZTUKA", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:"8", price:"4"},
-    {id: 760, name: "DZBANEK GRAPEFRUIT", fiscalName: "DZBANEK GRAPEFRUIT", baseUnit: "porcja", saleCategory: "Soki", category: "Napoje 23%", vat:"8", price:"25"},
-    {id: 761, name: "DZBANEK SOK JABLKO", fiscalName: "DZBANEK SOK JABLKO", baseUnit: "porcja", saleCategory: "Soki", category: "Napoje 8%", vat:"8", price:"25"},
+  dataset: IData[] = [
+    {id: 482, name: "SNIADANIE NA LATO", fiscalName: "SNIADANIE NA LATO", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:8, price:25},
+    {id: 483, name: "SNIADANIE ANGIELSKIE", fiscalName: "SNIADANIE ANGIELSKIE", baseUnit: "porcja", saleCategory: "Śniadania", category: "Jedzenie", vat:8, price:21},
+    {id: 480, name: "OWSIANKA", fiscalName: "OWSIANKA", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:8, price:11},
+    {id: 481, name: "JAJKA ROYAL", fiscalName: "JAJKA ROYAL", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:8, price:23},
+    {id: 478, name: "KANAPKA PASTA JAJKO", fiscalName: "KANAPKA PASTA JAJKO", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:8, price:9},
+    {id: 479, name: "KANAPKA TWAROG", fiscalName: "KANAPKA TWAROG", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:8, price:9},
+    {id: 476, name: "JAJKA SADZONE", fiscalName: "JAJKA SADZONE", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:8, price:10},
+    {id: 477, name: "JAJKO 1 SZTUKA", fiscalName: "JAJKO 1 SZTUKA", baseUnit: "szt.", saleCategory: "Śniadania", category: "Jedzenie", vat:8, price:4},
+    {id: 760, name: "DZBANEK GRAPEFRUIT", fiscalName: "DZBANEK GRAPEFRUIT", baseUnit: "porcja", saleCategory: "Soki", category: "Napoje 23%", vat:8, price:25},
+    {id: 761, name: "DZBANEK SOK JABLKO", fiscalName: "DZBANEK SOK JABLKO", baseUnit: "porcja", saleCategory: "Soki", category: "Napoje 8%", vat:8, price:25},
   ];
 
   ngOnInit(): void {
