@@ -11,10 +11,11 @@ import {
 @Component({
   selector: 'app-grid',
   templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.scss']
+  styleUrls: ['./grid.component.scss'],
 })
 
 export class GridComponent implements OnInit {
+  title = "Zadanie rekrutacyjne";
   angularGrid!: AngularGridInstance;
   columnDefinitions: Column[] = [];
   gridOptions: GridOption = {};
@@ -84,6 +85,8 @@ export class GridComponent implements OnInit {
         },
       frozenColumn: this.frozenColumnCount,
     }
+
+
 
     this.dataset;
   };
