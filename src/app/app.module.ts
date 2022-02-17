@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { GridComponent } from './grid/grid.component';
 import { GridSecVersionComponent } from './grid-sec-version/grid-sec-version.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GridComponent,
     GridSecVersionComponent,
+    InfoComponent,
   ],
   imports: [
     AngularSlickgridModule.forRoot(),
