@@ -1,0 +1,32 @@
+.gridPane .slickgrid-container, .slick-pagination-container{
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 800px !important;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.slick-pagination-container{
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  .slick-pagination{
+    //input
+    --slick-pagination-page-input-bgcolor: white;
+    --slick-pagination-page-input-height: 20px;
+    --slick-pagination-page-input-width: 20px;
+    //button
+    --slick-pagination-button-border-color: rgb(255, 255, 255);
+    --slick-pagination-button-border: 1px solid black;
+    //select
+    --slick-pagination-page-select-border-radius: 10px;
+  }
+}
+:root {
+  //other
+  --slick-header-filter-row-border-bottom: 2px solid rgb(0, 0, 0);
+  --slick-cell-odd-background-color: rgba(211, 211, 211, 0.178);
+  --slick-cell-even-background-color: white;
+  --slick-frozen-border-right: 1px solid black !important;
+}

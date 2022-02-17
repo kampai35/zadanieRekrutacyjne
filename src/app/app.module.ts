@@ -8,12 +8,11 @@ import { GridComponent } from './grid/grid.component';
 import { GridSecVersionComponent } from './grid-sec-version/grid-sec-version.component';
 import { AgGridModule } from 'ag-grid-angular';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     GridComponent,
-    GridSecVersionComponent
+    GridSecVersionComponent,
   ],
   imports: [
     AngularSlickgridModule.forRoot(),
@@ -21,7 +20,7 @@ import { AgGridModule } from 'ag-grid-angular';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [ ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {  }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {
   AngularGridInstance,
   Column,
@@ -12,6 +12,7 @@ import {
   selector: 'app-grid',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 
 export class GridComponent implements OnInit {
@@ -40,41 +41,44 @@ export class GridComponent implements OnInit {
     }
     this.columnDefinitions = [
       {
-        id: 'id', name: '#', field: 'id', sortable: true,
+        id: 'id', name: '#', field: 'id', sortable: true, width: 80,
         type: FieldType.string, filterable: true, filter: { model: Filters.compoundInputText }
       },
       {
-        id: 'name', name: 'Nazwa', field: 'name', sortable: true,
+        id: 'name', name: 'Nazwa', field: 'name', sortable: true, width: 180,
         type: FieldType.string, filterable: true, filter: { model: Filters.compoundInputText }
       },
       {
-        id: 'fiscalName', name: 'Nazwa Fiskalna', field: 'fiscalName', sortable: true,
+        id: 'fiscalName', name: 'Nazwa Fiskalna', field: 'fiscalName', sortable: true, width: 180,
         type: FieldType.string, filterable: true, filter: { model: Filters.compoundInputText }
       },
       {
-        id: 'baseUnit', name: 'Jednostka Podstawowa', field: 'baseUnit', sortable: true,
+        id: 'baseUnit', name: 'Jednostka Podstawowa', field: 'baseUnit', sortable: true, width: 100,
         type: FieldType.string, filterable: true, filter: { model: Filters.compoundInputText }
       },
       {
-        id: 'saleCategory', name: 'Kat. Sprz.', field: 'saleCategory', sortable: true,
+        id: 'saleCategory', name: 'Kat. Sprz.', field: 'saleCategory', sortable: true, width: 100,
         type: FieldType.string, filterable: true, filter: { model: Filters.compoundInputText }
       },
       {
-        id: 'category', name: 'Dept. Sprz.', field: 'category', sortable: true,
+        id: 'category', name: 'Dept. Sprz.', field: 'category', sortable: true,  width: 100,
         type: FieldType.string, filterable: true, filter: { model: Filters.compoundInputText }
       },
       {
-        id: 'vat', name: 'Vat Sprz.', field: 'vat', sortable: true, formatter: Formatters.percentSymbol,
+        id: 'vat', name: 'Vat Sprz.', field: 'vat', sortable: true, formatter: Formatters.percentSymbol, width: 80,
         type: FieldType.number, filterable: true, filter: { model: Filters.compoundInputNumber }
       },
       {
-        id: 'price', name: 'Cennik Podstawowy', field: 'price', formatter: formatterCustomCurrency, sortable: true,
+        id: 'price', name: 'Cennik Podstawowy', field: 'price', formatter: formatterCustomCurrency, sortable: true,  width: 180,
         type: FieldType.float, filterable: true, filter: { model: Filters.compoundInputNumber }
       },
     ];
 
     this.gridOptions = {
-      enableAutoResize: true,
+      alwaysShowVerticalScroll: false,
+      enableAutoSizeColumns: false,
+      gridHeight: 300,
+      enableHeaderMenu: false,
       enableCellNavigation: true,
       enableSorting: true,
       enableFiltering: true,
@@ -84,6 +88,7 @@ export class GridComponent implements OnInit {
           pageSize: 5
         },
       frozenColumn: this.frozenColumnCount,
+      headerRowHeight: 40,
     }
 
 
